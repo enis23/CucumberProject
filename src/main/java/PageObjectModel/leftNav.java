@@ -26,6 +26,16 @@ public class leftNav {
     @FindBy(xpath = "//span[text()='Countries']")
     private WebElement buttonCountries;
 
+    public void clickondropdownSetup(){
+        dropdownSetup.click();
+    }
 
+    public void clickondropdownParameters(){
+        dropdownParameters.click();
+    }
+
+    public void clickonbuttonCountries(){
+        buttonCountries.click();
+    }
 
 }

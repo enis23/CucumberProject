@@ -1,5 +1,6 @@
 package stepDefinition;
 
+import PageObjectModel.leftNav;
 import PageObjectModel.signInPage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
@@ -17,6 +18,7 @@ public class countrySteps {
 
     WebDriver driver;
     signInPage sip = new signInPage();
+    leftNav lv = new leftNav();
 
     @Given("^Go to mersys website$")
     public void go_to_mersys_website() throws Throwable {
@@ -36,6 +38,20 @@ public class countrySteps {
 
     }
 
+    @Given("^Click on setup on top$")
+    public void click_on_setup_on_top() throws Throwable {
+        lv.clickondropdownSetup();
+    }
+
+    @Given("^Click on parameter$")
+    public void click_on_parameter() throws Throwable {
+        lv.clickondropdownParameters();
+    }
+
+    @Given("^Click on countries$")
+    public void click_on_countries() throws Throwable {
+        lv.clickonbuttonCountries();
+    }
 
 
 }
