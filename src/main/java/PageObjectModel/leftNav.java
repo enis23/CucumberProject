@@ -26,6 +26,9 @@ public class leftNav {
     @FindBy(xpath = "//span[text()='Countries']")
     private WebElement buttonCountries;
 
+    @FindBy(xpath="//span[contains(text(),'Citizenships')]")
+    private WebElement buttonCitizenship;
+
     public void clickondropdownSetup(){
         dropdownSetup.click();
     }
@@ -38,4 +41,7 @@ public class leftNav {
         buttonCountries.click();
     }
 
+    public void clickbuttonCitizenship(){
+        buttonCitizenship.click();
+    }
 }

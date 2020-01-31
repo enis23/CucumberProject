@@ -4,7 +4,7 @@ Feature: Create a Country
     Given Go to mersys website
     And Type the username and password and click on login button
     And Click on setup on top
-    And Click on parameter
+    And Click on parameters
     And Click on countries
 
 
@@ -13,5 +13,6 @@ Feature: Create a Country
 
 #   Advantage of cucumber
 #     Understandable for everyone in the team
-#     Report will understable for everyone as well
+#     Report will understandable for everyone as well
 #
+

@@ -56,8 +56,8 @@ public class signInPage {
     private WebElement buttonLogin;
 
       public void typeIninputUserName(){
-          inputUserName.sendKeys( "nigeria_tenant_admin" );
-      }
+        inputUserName.sendKeys( "nigeria_tenant_admin" );
+    }
 
       public void typeIninputPassword(){
           inputPassword.sendKeys( "TnvLOl54WxR75vylop2A" );
