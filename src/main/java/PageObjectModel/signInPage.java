@@ -29,7 +29,7 @@ public class signInPage {
 
  */
 
-    WebDriver driver ;
+    private WebDriver driver ;
 
     public signInPage(){
 
@@ -45,8 +45,25 @@ public class signInPage {
 //        driver.findElement(By.cssSelector("button[aria-label=\"LOGIN\"]")).click();
 //    }
 
-    @FindBy(css="[formcontrolname=\"username\"]")
+//     find by is working as driver.findelement
+      @FindBy(css="[formcontrolname=\"username\"]")
     private WebElement inputUserName;
 
+      @FindBy(css="[formcontrolname=\"password\"]")
+    private WebElement inputPassword;
 
+      @FindBy(css="button[aria-label=\"LOGIN\"]")
+    private WebElement buttonLogin;
+
+      public void typeIninputUserName(){
+          inputUserName.sendKeys( "nigeria_tenant_admin" );
+      }
+
+      public void typeIninputPassword(){
+          inputPassword.sendKeys( "TnvLOl54WxR75vylop2A" );
+      }
+
+      public void clickonbuttonLogin(){
+          buttonLogin.click();
+      }
 }
