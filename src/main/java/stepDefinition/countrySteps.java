@@ -7,6 +7,8 @@ import PageObjectModel.signInPage;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import org.omg.CORBA.TIMEOUT;
 import org.openqa.selenium.By;
@@ -73,5 +75,13 @@ public class countrySteps {
     public void type_in_the_code(String code) throws Throwable {
         cp.typeInthecountryInputCode( code );
     }
+    @When("^Click on save button$")
+    public void click_on_save_button() throws Throwable {
+        ap.clickSaveButton();
+    }
 
+    @Then("^\"(.*?)\" should be displayed$")
+    public void should_be_displayed(String arg1) throws Throwable {
+
+    }
 }
