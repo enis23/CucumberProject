@@ -6,7 +6,7 @@ Feature: Create a Country
     And Click on setup on top
     And Click on parameters
     And Click on countries
-
+    And Click on plus icon
 
 
 

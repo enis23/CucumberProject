@@ -1,5 +1,6 @@
 package stepDefinition;
 
+import PageObjectModel.countryPage;
 import PageObjectModel.leftNav;
 import PageObjectModel.signInPage;
 import cucumber.api.java.en.And;
@@ -22,6 +23,7 @@ public class countrySteps {
     WebDriver driver;
     signInPage sip = new signInPage();
     leftNav lv = new leftNav();
+    countryPage cp = new countryPage();
 
     @Given("^Go to mersys website$")
     public void go_to_mersys_website() throws Throwable {
@@ -55,5 +57,9 @@ public class countrySteps {
         lv.clickonbuttonCountries();
     }
 
+    @Given("^Click on plus icon$")
+    public void click_on_plus_icon() throws Throwable {
+        cp.clickPlusButton();
+    }
 
 }
