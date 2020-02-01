@@ -7,6 +7,8 @@ Feature: Create a Country
     And Click on parameters
     And Click on countries
     And Click on plus icon
+    And Type in the Name "CucumberCountry"
+    And Type in the code "CucumberAli"
 
 
 

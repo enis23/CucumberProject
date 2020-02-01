@@ -62,4 +62,16 @@ public class countrySteps {
         cp.clickPlusButton();
     }
 
+    @Given("^Type in the Name \"(.*?)\"$")
+    public void type_in_the_Name(String name) throws Throwable {
+
+        cp.typeIntheCountryInputName( name );
+
+    }
+
+    @Given("^Type in the code \"(.*?)\"$")
+    public void type_in_the_code(String code) throws Throwable {
+        cp.typeInthecountryInputCode( code );
+    }
+
 }

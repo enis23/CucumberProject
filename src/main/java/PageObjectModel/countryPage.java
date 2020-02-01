@@ -20,8 +20,22 @@ public class countryPage extends AbstractClass {
     @FindBy(css = "svg[data-icon='plus']" )
     private WebElement plusButton;
 
+    @FindBy(xpath="//mat-dialog-container//ms-text-field[@placeholder='GENERAL.FIELD.NAME']//input")
+    private WebElement countryInputName;
+
+    @FindBy(xpath = "//mat-dialog-container//ms-text-field[@placeholder='GENERAL.FIELD.CODE']//input")
+    private WebElement countryInputCode;
+
     public void clickPlusButton(){
         clickFunction( plusButton );
+    }
+
+    public void typeIntheCountryInputName(String name){
+        sendkeysFunction( countryInputName , name );
+    }
+
+    public void typeInthecountryInputCode(String code){
+        sendkeysFunction( countryInputCode , code );
     }
 
 }
