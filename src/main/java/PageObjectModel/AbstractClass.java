@@ -76,7 +76,12 @@ public void sendkeysFunction(WebElement sendkeysElement , String value){
     }
 
     public void waitUntilInVisibility(WebElement waitElement){
-        wait.until( ExpectedConditions.invisibilityOf( waitElement ) );
+
+        try {
+            wait.until( ExpectedConditions.invisibilityOf( waitElement ) );
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 
 }
