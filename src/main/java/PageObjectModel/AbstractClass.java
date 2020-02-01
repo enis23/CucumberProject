@@ -40,7 +40,7 @@ public void clickFunction(WebElement clickElement){
 
 }
 
-public void sendkeysFunction(WebElement sendkeysElement,String value){
+public void sendkeysFunction(WebElement sendkeysElement , String value){
 
     wait.until( ExpectedConditions.visibilityOf( sendkeysElement ) );
     sendkeysElement.sendKeys( value );

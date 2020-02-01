@@ -6,6 +6,11 @@ Feature: Create Citizenship
     And Click on setup on top
     And Click on parameters
     And Click on citizenship
+    And Click on plus icon
+    And Type the citizenship name "CucumberCitizen"
+    And Type the shortName "CucCit"
+    When Click on save button
+    Then "CucumberCitizen" should be displayed
 
 
 
