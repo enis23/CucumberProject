@@ -29,6 +29,9 @@ public class leftNav {
     @FindBy(xpath="//span[contains(text(),'Citizenships')]")
     private WebElement buttonCitizenship;
 
+    @FindBy (xpath = "//span[text()='Subject Categories']")
+    private WebElement buttonSubjectCategories;
+
     public void clickondropdownSetup(){
         dropdownSetup.click();
     }
@@ -43,5 +46,15 @@ public class leftNav {
 
     public void clickbuttonCitizenship(){
         buttonCitizenship.click();
+    }
+
+    public void clickSubjectCategories(){
+        buttonSubjectCategories.click();
+    }
+
+//    return the current websiteURL
+    public String getURL(){
+        String url = driver.getCurrentUrl();
+        return url;
     }
 }

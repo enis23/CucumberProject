@@ -33,7 +33,7 @@ public class signInPage {
 
     public signInPage(){
 
-        driver = Driver.getDriver();
+         driver=Driver.getDriver();
         PageFactory.initElements( driver , this );
 
     }
@@ -66,4 +66,5 @@ public class signInPage {
       public void clickonbuttonLogin(){
           buttonLogin.click();
       }
+      
 }

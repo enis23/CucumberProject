@@ -35,16 +35,13 @@ public class countrySteps {
 
     @Given("^Type the username and password and click on login button$")
     public void type_the_username_and_password_and_click_on_login_button() throws Throwable {
-
         sip.typeIninputUserName();
         sip.typeIninputPassword();
         sip.clickonbuttonLogin();
-
     }
 
     @Given("^Click on setup on top$")
     public void click_on_setup_on_top() throws Throwable {
-
         lv.clickondropdownSetup();
     }
 
