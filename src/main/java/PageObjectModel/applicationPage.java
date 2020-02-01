@@ -13,6 +13,7 @@ public class applicationPage extends AbstractClass{
 
     private WebDriver driver ;
 
+
     public applicationPage(){
 
         driver = Driver.getDriver();
@@ -26,7 +27,10 @@ public class applicationPage extends AbstractClass{
     @FindBy(css="mat-dialog-actions svg[data-icon='save']")
     private WebElement saveButton;
 
-//    find all is working like driver.findElements
+    @FindBy(xpath="//div[contains(text(),'successfully created')]")
+    private WebElement successfulMessage;
+
+//  find all is working like driver.findElements
     @FindAll({
             @FindBy(xpath="//tbody//tr//td[2]")
     }  )
@@ -38,6 +42,13 @@ public class applicationPage extends AbstractClass{
 
     public void clickSaveButton(){
         clickFunction( saveButton );
+    }
+
+    public void nameIsCreated(String value) throws InterruptedException {
+
+        waitUntilVisibility(successfulMessage);
+
+        verifyCreated( tableListofNames ,value );
     }
 
 }
