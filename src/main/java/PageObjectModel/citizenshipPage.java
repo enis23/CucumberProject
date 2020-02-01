@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class citizenshipPage {
+public class citizenshipPage extends AbstractClass{
 
     private WebDriver driver ;
 
@@ -19,10 +19,14 @@ public class citizenshipPage {
     private WebElement inputCitizenName;
 
     @FindBy(xpath = "//ms-dialog-content//ms-text-field[@placeholder='GENERAL.FIELD.SHORTNAME']//input")
-    private WebElement getInputCitizenShortName;
+    private WebElement inputCitizenShortName;
 
-    public void typeInTheInputCitizenName(){
-        
+    public void typeInTheInputCitizenName(String name){
+        sendkeysFunction( inputCitizenName , name );
+    }
+
+    public void typeIntheInputCitizenShortName(String shortName){
+        sendkeysFunction( inputCitizenShortName , shortName );
     }
 
 }

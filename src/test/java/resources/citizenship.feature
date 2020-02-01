@@ -14,3 +14,6 @@ Feature: Create Citizenship
 
 
 
+#    get all the name from table
+#    read one by one
+#    make sure my value is displayed in the table
