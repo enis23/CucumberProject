@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class leftNav {
+public class leftNav extends AbstractClass{
 
     private WebDriver driver ;
 
@@ -33,23 +33,23 @@ public class leftNav {
     private WebElement buttonSubjectCategories;
 
     public void clickondropdownSetup(){
-        dropdownSetup.click();
+        clickFunction( dropdownSetup );
     }
 
     public void clickondropdownParameters(){
-        dropdownParameters.click();
+        clickFunction( dropdownParameters );
     }
 
     public void clickonbuttonCountries(){
-        buttonCountries.click();
+        clickFunction(buttonCountries);
     }
 
     public void clickbuttonCitizenship(){
-        buttonCitizenship.click();
+        clickFunction(buttonCitizenship);
     }
 
     public void clickSubjectCategories(){
-        buttonSubjectCategories.click();
+        clickFunction(buttonSubjectCategories);
     }
 
 //    return the current websiteURL
