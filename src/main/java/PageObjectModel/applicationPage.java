@@ -47,7 +47,8 @@ public class applicationPage extends AbstractClass{
     public void nameIsCreated(String value) throws InterruptedException {
 
         waitUntilVisibility(successfulMessage);
-
+        waitUntilInVisibility( successfulMessage );
+        System.out.println(tableListofNames.size()+"<-------------");
         verifyCreated( tableListofNames ,value );
     }
 

@@ -53,13 +53,16 @@ public void sendkeysFunction(WebElement sendkeysElement , String value){
     public void verifyCreated(List<WebElement> tableList, String value ){
 
     boolean result = false;
-
+        System.out.println(tableList.size());
     for(int i = 0; i<tableList.size() ; i++){
-        if(tableList.get( i ).getText().equalsIgnoreCase( value )){
+        System.out.println(tableList.get( i ).getText()+" list names ");
+        if(tableList.get( i ).getText().trim().equalsIgnoreCase( value )){
             result = true;
+            break;
         }
     }
 
+        System.out.println(result + " resukt is here ");
     if(result==false){
         Assert.fail(  );
     }else{
@@ -70,6 +73,10 @@ public void sendkeysFunction(WebElement sendkeysElement , String value){
 
     public void waitUntilVisibility(WebElement waitElement){
         wait.until( ExpectedConditions.visibilityOf( waitElement ) );
+    }
+
+    public void waitUntilInVisibility(WebElement waitElement){
+        wait.until( ExpectedConditions.invisibilityOf( waitElement ) );
     }
 
 }
