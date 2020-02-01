@@ -1,5 +1,6 @@
 package PageObjectModel;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -19,7 +20,8 @@ pass the parameters
 
 use it in the step definitions
 
-configuration reader
+FindAll
+ 
  */
 
 /*
@@ -34,7 +36,7 @@ abstract class create
 
 private WebDriver driver = Driver.getDriver();
 
-WebDriverWait wait =new WebDriverWait( driver,20 );
+WebDriverWait wait =new WebDriverWait( driver,10 );
 
 public void clickFunction(WebElement clickElement){
 

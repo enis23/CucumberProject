@@ -1,5 +1,6 @@
 package PageObjectModel;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindAll;
@@ -24,7 +25,7 @@ public class applicationPage extends AbstractClass{
     @FindBy(css = "svg[data-icon='plus']" )
     private WebElement plusButton;
 
-    @FindBy(css="mat-dialog-actions svg[data-icon='save']")
+    @FindBy(xpath="//span[text()='Save']")
     private WebElement saveButton;
 
     @FindBy(xpath="//div[contains(text(),'successfully created')]")
