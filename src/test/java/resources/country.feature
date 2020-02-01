@@ -9,7 +9,8 @@ Feature: Create a Country
     And Click on plus icon
     And Type in the Name "CucumberCountry"
     And Type in the code "CucumberAli"
-
+    When Click on save button
+    Then "CucumberCountry" should be displayed
 
 
 

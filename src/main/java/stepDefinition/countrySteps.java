@@ -1,5 +1,6 @@
 package stepDefinition;
 
+import PageObjectModel.applicationPage;
 import PageObjectModel.countryPage;
 import PageObjectModel.leftNav;
 import PageObjectModel.signInPage;
@@ -24,6 +25,7 @@ public class countrySteps {
     signInPage sip = new signInPage();
     leftNav lv = new leftNav();
     countryPage cp = new countryPage();
+    applicationPage ap = new applicationPage();
 
     @Given("^Go to mersys website$")
     public void go_to_mersys_website() throws Throwable {
@@ -59,14 +61,12 @@ public class countrySteps {
 
     @Given("^Click on plus icon$")
     public void click_on_plus_icon() throws Throwable {
-        cp.clickPlusButton();
+        ap.clickPlusButton();
     }
 
     @Given("^Type in the Name \"(.*?)\"$")
     public void type_in_the_Name(String name) throws Throwable {
-
         cp.typeIntheCountryInputName( name );
-
     }
 
     @Given("^Type in the code \"(.*?)\"$")
