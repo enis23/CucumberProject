@@ -29,11 +29,18 @@ public class leftNav extends AbstractClass{
     @FindBy(xpath="//span[contains(text(),'Citizenships')]")
     private WebElement buttonCitizenship;
 
+    @FindBy(xpath="//span[contains(text(),'Nationalities')]")
+    private WebElement buttonNatioanlity;
+
     @FindBy (xpath = "//span[text()='Subject Categories']")
     private WebElement buttonSubjectCategories;
 
     public void clickondropdownSetup(){
         clickFunction( dropdownSetup );
+    }
+
+    public void clickOnbuttonNatioanlity(){
+        clickFunction( buttonNatioanlity );
     }
 
     public void clickondropdownParameters(){
