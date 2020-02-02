@@ -35,6 +35,9 @@ public class leftNav extends AbstractClass{
     @FindBy (xpath = "//span[text()='Subject Categories']")
     private WebElement buttonSubjectCategories;
 
+    @FindBy (xpath = "//span[contains(text(), 'Cities')]")
+    private WebElement buttonCities;
+
     public void clickondropdownSetup(){
         clickFunction( dropdownSetup );
     }
@@ -58,6 +61,8 @@ public class leftNav extends AbstractClass{
     public void clickSubjectCategories(){
         clickFunction(buttonSubjectCategories);
     }
+
+    public void clickOnbuttonCity(){ clickFunction(buttonCities);}
 
 //    return the current websiteURL
     public String getURL(){
