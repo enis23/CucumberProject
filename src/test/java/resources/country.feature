@@ -11,7 +11,8 @@ Feature: Create a Country
     And Type in the code "CucumberAli"
     When Click on save button
     Then "CucumberCountry" should be displayed
-
+    And Remove the data "CucumberCountry"
+    Then Verify data is removed "CucumberCountry"
 
 
 #   Advantage of cucumber

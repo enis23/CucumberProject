@@ -60,8 +60,7 @@ public class applicationPage extends AbstractClass{
 
     public void nameIsCreated(String value) throws InterruptedException {
 
-        waitUntilVisibility(successfulMessage);
-        waitUntilInVisibility( successfulMessage );
+        Thread.sleep( 2000 );
         System.out.println(tableListofNames.size()+"<-------------");
         verifyCreated( tableListofNames ,value );
     }
@@ -70,7 +69,7 @@ public class applicationPage extends AbstractClass{
         deleteFunctionality( tableListofNames ,listOfDeleteButtons ,value , buttonYes);
     }
 
-    public void verifingDeleted(String value){
+    public void verifingDeleted(String value) throws InterruptedException {
         verifyDeletedAbstractClass( tableListofNames , value );
     }
 
