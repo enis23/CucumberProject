@@ -17,6 +17,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
 import utilities.Driver;
+import utilities.ReadPropertiesFile;
 
 import java.util.concurrent.TimeUnit;
 
@@ -35,7 +36,7 @@ public class countrySteps {
 
         driver = Driver.getDriver();
         driver.manage().window().maximize();
-        driver.get( "https://test-basqar.mersys.io" );
+        driver.get( ReadPropertiesFile.getData( "URL" ) );
         driver.manage().timeouts().implicitlyWait( 20,TimeUnit.SECONDS );
     }
 
