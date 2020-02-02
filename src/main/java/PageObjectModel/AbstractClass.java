@@ -84,4 +84,26 @@ public void sendkeysFunction(WebElement sendkeysElement , String value){
         }
     }
 
+    public void deleteFunctionality(List<WebElement> name , List<WebElement> deleteButton , String value , WebElement buttonYes){
+
+    for(int i = 0 ; i<name.size() ; i++){
+
+        if(name.get( i ).getText().equalsIgnoreCase( value )){
+
+            clickFunction( deleteButton.get( i ) );
+
+        }
+    }
+
+    }
+
+
+// create a delete function
+
+// configuration reader (.properties file )
+
+// scenario outline
+
+// runner (smoke test runner , regression test runner)
+
 }

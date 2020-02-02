@@ -31,10 +31,14 @@ public class applicationPage extends AbstractClass{
     @FindBy(xpath="//div[contains(text(),'successfully created')]")
     private WebElement successfulMessage;
 
+    @FindBy(xpath = "//span[text()=' Yes ']")
+    private WebElement buttonYes;
+
 //  find all is working like driver.findElements
     @FindAll({
             @FindBy(xpath="//tbody//tr//td[2]")
     }  )
+
     private List<WebElement> tableListofNames;
 
     public void clickPlusButton(){
@@ -45,6 +49,10 @@ public class applicationPage extends AbstractClass{
         clickFunction( saveButton );
     }
 
+    public void clickYes(){
+        clickFunction( buttonYes );
+    }
+
     public void nameIsCreated(String value) throws InterruptedException {
 
         waitUntilVisibility(successfulMessage);
@@ -52,5 +60,7 @@ public class applicationPage extends AbstractClass{
         System.out.println(tableListofNames.size()+"<-------------");
         verifyCreated( tableListofNames ,value );
     }
+
+
 
 }
