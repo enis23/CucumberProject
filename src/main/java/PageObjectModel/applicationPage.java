@@ -38,8 +38,13 @@ public class applicationPage extends AbstractClass{
     @FindAll({
             @FindBy(xpath="//tbody//tr//td[2]")
     }  )
-
     private List<WebElement> tableListofNames;
+
+    @FindAll({
+            @FindBy(xpath="//ms-delete-button//button")
+    })
+    private List<WebElement> listOfDeleteButtons;
+
 
     public void clickPlusButton(){
         clickFunction( plusButton );
@@ -61,6 +66,9 @@ public class applicationPage extends AbstractClass{
         verifyCreated( tableListofNames ,value );
     }
 
+    public void deletingElement(String value){
+        deleteFunctionality( tableListofNames ,listOfDeleteButtons ,value , buttonYes);
+    }
 
 
 }

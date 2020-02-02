@@ -11,8 +11,8 @@ Feature: Create Citizenship
     And Type the shortName "CucCit"
     When Click on save button
     Then "CucumberCitizen" should be displayed
-    And Remove the data ""
-    Then Verify data is removed
+    And Remove the data "CucumberCitizen"
+    Then Verify data is removed "CucumberCitizen"
 
 
 #    get all the name from table

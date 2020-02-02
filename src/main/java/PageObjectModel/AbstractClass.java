@@ -72,7 +72,11 @@ public void sendkeysFunction(WebElement sendkeysElement , String value){
     }
 
     public void waitUntilVisibility(WebElement waitElement){
-        wait.until( ExpectedConditions.visibilityOf( waitElement ) );
+        try {
+            wait.until( ExpectedConditions.visibilityOf( waitElement ) );
+        }catch(Exception e){
+            System.out.println(e.getMessage());
+        }
     }
 
     public void waitUntilInVisibility(WebElement waitElement){
@@ -86,14 +90,14 @@ public void sendkeysFunction(WebElement sendkeysElement , String value){
 
     public void deleteFunctionality(List<WebElement> name , List<WebElement> deleteButton , String value , WebElement buttonYes){
 
-    for(int i = 0 ; i<name.size() ; i++){
+        for(int i = 0 ; i<name.size() ; i++){
 
-        if(name.get( i ).getText().equalsIgnoreCase( value )){
+            if(name.get( i ).getText().equalsIgnoreCase( value )){
 
-            clickFunction( deleteButton.get( i ) );
-
+                clickFunction( deleteButton.get( i ) );
+                clickFunction( buttonYes );
+            }
         }
-    }
 
     }
 
