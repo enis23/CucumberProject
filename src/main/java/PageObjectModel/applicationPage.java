@@ -70,5 +70,9 @@ public class applicationPage extends AbstractClass{
         deleteFunctionality( tableListofNames ,listOfDeleteButtons ,value , buttonYes);
     }
 
+    public void verifingDeleted(String value){
+        verifyDeletedAbstractClass( tableListofNames , value );
+    }
+
 
 }

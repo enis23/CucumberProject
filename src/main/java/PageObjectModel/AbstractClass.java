@@ -50,26 +50,7 @@ public void sendkeysFunction(WebElement sendkeysElement , String value){
 
 }
 
-    public void verifyCreated(List<WebElement> tableList, String value ){
 
-    boolean result = false;
-        System.out.println(tableList.size());
-    for(int i = 0; i<tableList.size() ; i++){
-        System.out.println(tableList.get( i ).getText()+" list names ");
-        if(tableList.get( i ).getText().trim().equalsIgnoreCase( value )){
-            result = true;
-            break;
-        }
-    }
-
-        System.out.println(result + " resukt is here ");
-    if(result==false){
-        Assert.fail(  );
-    }else{
-        System.out.println(value + " is displayed");
-    }
-
-    }
 
     public void waitUntilVisibility(WebElement waitElement){
         try {
@@ -100,7 +81,40 @@ public void sendkeysFunction(WebElement sendkeysElement , String value){
         }
 
     }
+    public void verifyCreated(List<WebElement> tableList, String value ){
 
+        boolean result = false;
+
+        for(int i = 0; i<tableList.size() ; i++){
+
+            if(tableList.get( i ).getText().trim().equalsIgnoreCase( value )){
+                result = true;
+                break;
+            }
+        }
+
+        if(result==false){
+            Assert.fail(  );
+        }else{
+            System.out.println(value + " is displayed");
+        }
+
+    }
+
+    public void verifyDeletedAbstractClass(List<WebElement> tableList, String value ){
+        boolean result = false;
+        for(int i =0; i<tableList.size() ; i++){
+            if(tableList.get( i ).getText().trim().equalsIgnoreCase( value )){
+                result = true;
+                break;
+            }
+        }
+        if(result==true){
+            Assert.fail(  );
+        }else{
+            System.out.println(value + " is not displayed");
+        }
+    }
 
 // create a delete function
 
