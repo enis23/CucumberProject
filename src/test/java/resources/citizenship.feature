@@ -1,5 +1,5 @@
 Feature: Create Citizenship
-  @SmokeTest
+  @SmokeTest @Regression
   Scenario:  Citizenship creating
 
     Given Go to mersys website

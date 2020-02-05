@@ -1,5 +1,5 @@
 Feature: Create a City
-
+  @Regression
   Scenario Outline:  City Creating
 
     Given Go to mersys website
