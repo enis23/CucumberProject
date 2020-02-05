@@ -17,6 +17,9 @@ public class leftNav extends AbstractClass{
 
     }
 
+    @FindBy(xpath="//span[text()='Discounts']")
+    private WebElement discounts;
+
     @FindBy(css = "fuse-navigation .group-items > .nav-item:nth-child(1)")
     private WebElement dropdownSetup;
 
@@ -63,6 +66,8 @@ public class leftNav extends AbstractClass{
     }
 
     public void clickOnbuttonCity(){ clickFunction(buttonCities);}
+
+    public void clickOnDiscounts(){ clickFunction(discounts); }
 
 //    return the current websiteURL
     public String getURL(){

@@ -19,4 +19,9 @@ Examples:
     |Description|IntegrationCode|priority|
     |  discount1   |code1          |1       |
     |  discount2   |code2          |2       |
-    |  discount2   |code2          |3       |
+    |  discount3   |code3          |3       |
+
+
+
+
+
