@@ -1,5 +1,5 @@
 Feature: Create a Nationality
-  @SmokeTest @Regression
+  @SmokeTest
   Scenario:  Nationality Creating
 
     Given Go to mersys website
