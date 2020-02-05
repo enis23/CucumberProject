@@ -12,3 +12,5 @@ Feature: Create a Nationality
     Then "CucumberNationality" should be displayed
     And Remove the data "CucumberNationality"
     Then Verify data is removed "CucumberNationality"
+
+

@@ -16,7 +16,7 @@ Feature: Create a City
     Then Verify data is removed "<CityName>"
 
     Examples:
-      | CityName |
+      | CityName  |
       |   city1   |
       |   city2   |
       |   city3   |
@@ -26,3 +26,11 @@ Feature: Create a City
 # Can you run the scanario outline with out scenario  > yes you can run it
 
 # Feature , Scenario , Scenario outline , Given ANd then When   annotations
+
+
+#  Example scenario outline
+
+#  after class method
+
+#  runner -> smoke test and regression test runner
+
