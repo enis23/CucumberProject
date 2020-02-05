@@ -8,6 +8,8 @@ import org.openqa.selenium.TakesScreenshot;
 import utilities.Driver;
 
 import java.io.File;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class hooks {
 
@@ -30,7 +32,16 @@ public class hooks {
 
             System.out.println(featureFileName+"<------------");
 
-            File destinationFile = new File("target/screenShots/"+featureFileName+".png");
+            Date now = new Date(  );
+
+            System.out.println(now + "<---------    now ");
+
+            SimpleDateFormat formatter = new SimpleDateFormat( "yyyy-MM-dd HH:mm:ss" );
+
+            String dateinString = formatter.format( now );
+
+            File destinationFile = new File("target/screenShots/"+featureFileName+dateinString+".png");
+
 
             try {
                 FileUtils.copyFile( srcFile, destinationFile );
