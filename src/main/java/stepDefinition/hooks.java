@@ -40,6 +40,8 @@ public class hooks {
 
             String dateinString = formatter.format( now );
 
+            dateinString = dateinString.replace( ":" ,"," );
+
             File destinationFile = new File("target/screenShots/"+featureFileName+dateinString+".png");
 
 
