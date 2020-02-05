@@ -9,6 +9,7 @@ public class hooks {
         Before and after class methods will be in this class
      */
 
+//  screen shot next class
     @After
     public void afterClass(){
         Driver.closeDriver();
