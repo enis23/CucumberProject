@@ -42,6 +42,14 @@ public class myExcel {
 
     }
 
+    /*
+        How to get data from excel?
+                I am using apache poi to get data from excel.
+
+
+
+     */
+
 
 
 
