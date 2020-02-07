@@ -40,6 +40,9 @@ public class myExcel {
 
         System.out.println(cell);
 
+        readExcel.getData( "releaseNotes","ReleaseNotes" );
+
+
     }
 
     /*

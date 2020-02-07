@@ -4,9 +4,9 @@ import org.apache.poi.ss.usermodel.*;
 
 import java.io.FileInputStream;
 
-public class readExcel {
+public  class readExcel {
 
-        public String getData(String pathOfTheExcel , String sheetName){
+        public static String getData(String pathOfTheExcel , String sheetName ,String whichRow, int whichColumn){
 
             String path = ReadPropertiesFile.getData( pathOfTheExcel );
 
@@ -30,14 +30,29 @@ public class readExcel {
 
             Row row;
 
-            Cell cell;
+            Cell cell = null;
 
             int maxRow = sheet.getPhysicalNumberOfRows();
 
             System.out.println(maxRow);
 
-            
+            for(int i = 0 ; i<maxRow ; i++ ){
 
-            return "a";
+                row = sheet.getRow( i );
+
+//                int cellCount = sheet.getRow( i ).getLastCellNum();
+//                System.out.println(cellCount);
+
+                cell = row.getCell( 0 );
+
+                if(cell.equals( whichRow )){
+
+                    cell = row.getCell( whichColumn );
+
+                    break;
+                }
+            }
+
+            return cell.toString();
         }
 }
