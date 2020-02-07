@@ -45,8 +45,11 @@ public  class readExcel {
 
                 cell = row.getCell( 0 );
 
-                if(cell.equals( whichRow )){
+                System.out.println(cell.toString() + " <---------");
 
+                if(cell.toString().equals( whichRow )){
+
+                    System.out.println("I am in the if statemetn ");
                     cell = row.getCell( whichColumn );
 
                     break;

@@ -28,20 +28,21 @@ public class myExcel {
 //        if your utilities in the src test java folder
 //        String path2 = "excelFiles/releaseNotes.xlsx";
 
-        FileInputStream inStream = new FileInputStream( path );
+//        FileInputStream inStream = new FileInputStream( path );
+//
+//        Workbook workbook = WorkbookFactory.create( inStream );
+//
+//        Sheet sheet = workbook.getSheet( "Sheet1" );
+//
+//        Row row = sheet.getRow( 0 );
+//
+//        Cell cell = row.getCell( 0 );
+//
+//        System.out.println(cell);
 
-        Workbook workbook = WorkbookFactory.create( inStream );
+        String result = readExcel.getData( "releaseNotes","ReleaseNotes" , "STUDENT",1 );
 
-        Sheet sheet = workbook.getSheet( "Sheet1" );
-
-        Row row = sheet.getRow( 0 );
-
-        Cell cell = row.getCell( 0 );
-
-        System.out.println(cell);
-
-        readExcel.getData( "releaseNotes","ReleaseNotes" );
-
+        System.out.println(result);
 
     }
 
